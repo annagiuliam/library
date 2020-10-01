@@ -1,0 +1,79 @@
+
+body::after {
+  content: "";
+  background: url("booksPic.jpg");
+  background-size:     cover;                      
+  background-repeat:   no-repeat;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+#initial-text {
+  visibility: visible;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#table-div {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+}
+
+form {
+  visibility: hidden; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  margin: 5px;
+  
+}
+
+#form-submit {
+  margin: 10px;
+}
+
+.read {
+  color: green;
+}
+
+.unread {
+  color: red;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+   
+  }
+  
+  td, th {
+    text-align: left;
+    border: 1px solid #989696;
+    padding: 8px;
+  }
+  
+
+
+#remove-all-btn {
+  visibility: hidden;
+}

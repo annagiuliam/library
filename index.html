@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Library</title>
+</head>
+<body>
+    <main>
+    <div id=header>
+        <h1>The little library</h1>
+    </div>
+    <div id="add-book-div"> 
+        <button type="button" value="addBook" id="add-new-book">Add new book</button>
+    </div>  
+    <div id="form-container">
+        <form action="/submit book">        
+            <input type="text" placeholder="Title" id="book-title">
+            <input type="text" placeholder="Author" id="book-author">
+            <input type="text" placeholder="Pages" id="book-pages">
+            Read: <input type="radio" name="read-status" id="read-yes" value="yes">Yes <input type="radio" name="read-status" id="read-no" value="no">No<br>
+            
+            <button type="button" value="submit" id="form-submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="table-div">
+        <table id="table">
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Pages</th>
+              <th>Read</th>
+              <th>Remove</th>
+              <th>Read Status</th>
+            </tr>
+        </table>
+        
+    </div>
+
+    <div id="initial-text">
+        <h2>The library is currently empty</h2>
+    </div>
+    <div id="remove-all-div">
+        <button type="button" value="rm-all" id="remove-all-btn">Remove all books</button>
+    </div>
+    
+
+    </main>
+    <script type="text/javascript" src="script.js"></script> 
+</body>
+</html>
