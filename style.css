@@ -16,13 +16,21 @@ body::after {
 #initial-text {
   visibility: visible;
 }
+
+#addBookBtn {
+  visibility: visible;
+}
+
+#remove-all-btn {
+  visibility: hidden;
+}
+
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-}
+  }
 
 #table-div {
   margin-top: 40px;
@@ -65,15 +73,15 @@ table {
     width: 75%;
    
   }
+  tr {
+    width: 75%;
+  }
   
   td, th {
     text-align: left;
     border: 1px solid #989696;
     padding: 8px;
+    
   }
-  
 
-
-#remove-all-btn {
-  visibility: hidden;
-}
+ 

@@ -8,16 +8,14 @@ function Book(title, author, pages, readStatus) {
     
 }
 const addBookBtn = document.querySelector("#add-new-book");
-const addBookDiv = document.querySelector("#add-book-div");
 const submitBtn = document.querySelector("#form-submit");
-const formContainer = document.querySelector("#form-container");
 const form = document.querySelector("form");
 const startText = document.querySelector("#initial-text");
 const table = document.querySelector("#table");
 const removeAllBtn = document.querySelector("#remove-all-btn");
 
 addBookBtn.addEventListener("click", () => {
-    addBookDiv.remove();    
+    addBookBtn.style.visibility = "hidden";  
     form.style.visibility = "visible";  
 })
 
