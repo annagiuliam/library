@@ -24,10 +24,16 @@ submitBtn.addEventListener("click", () => {
     let author = document.querySelector("#book-author").value;
     let pages = document.querySelector("#book-pages").value;
     let readStatus = getReadStatus(); 
-    addBookToLibrary(title, author, pages, readStatus);
-    startText.style.visibility = "hidden";
-    updateTable(myLibrary);
-    form.reset();                                       //reset form after submit
+
+    if (isNaN(pages)) {
+        alert("Pages needs to be a number!");
+    } else {
+        addBookToLibrary(title, author, pages, readStatus);
+        startText.style.visibility = "hidden";
+        updateTable(myLibrary);
+        form.reset();                                //reset form after submit
+    }
+                                        
 
     if (myLibrary.length > 2) {
         removeAllBtn.style.visibility = "visible";
