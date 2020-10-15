@@ -1,12 +1,15 @@
 let myLibrary = [];
 
-function Book(title, author, pages, readStatus) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.readStatus = readStatus;
-    
+class Book {
+    constructor(title, author, pages, readStatus) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.readStatus = readStatus;
+        
+    }
 }
+
 const addBookBtn = document.querySelector("#add-new-book");
 const submitBtn = document.querySelector("#form-submit");
 const form = document.querySelector("form");
@@ -42,7 +45,7 @@ submitBtn.addEventListener("click", () => {
 })
 
 function addBookToLibrary(title, author, pages, readStatus) {
-    let newBook = new Book(title, author, pages, readStatus)
+    let newBook = new Book(title, author, pages, readStatus);
     myLibrary.push(newBook);
 }
 
