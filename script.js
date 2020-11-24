@@ -22,7 +22,9 @@ addBookBtn.addEventListener("click", () => {
     form.style.visibility = "visible";  
 })
 
-submitBtn.addEventListener("click", () => {
+form.addEventListener('submit', submitBook);
+
+function submitBook() {
     let title = document.querySelector("#book-title").value;
     let author = document.querySelector("#book-author").value;
     let pages = document.querySelector("#book-pages").value;
@@ -41,8 +43,29 @@ submitBtn.addEventListener("click", () => {
     if (myLibrary.length > 2) {
         removeAllBtn.style.visibility = "visible";
     }
+}
+
+// submitBtn.addEventListener("click", () => {
+//     let title = document.querySelector("#book-title").value;
+//     let author = document.querySelector("#book-author").value;
+//     let pages = document.querySelector("#book-pages").value;
+//     let readStatus = getReadStatus(); 
+
+//     if (isNaN(pages)) {
+//         alert("Pages needs to be a number!");
+//     } else {
+//         addBookToLibrary(title, author, pages, readStatus);
+//         startText.style.visibility = "hidden";
+//         updateTable(myLibrary);
+//         form.reset();                                //reset form after submit
+//     }
+                                        
+
+//     if (myLibrary.length > 2) {
+//         removeAllBtn.style.visibility = "visible";
+//     }
     
-})
+// })
 
 function addBookToLibrary(title, author, pages, readStatus) {
     let newBook = new Book(title, author, pages, readStatus);

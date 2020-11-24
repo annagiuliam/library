@@ -15,13 +15,30 @@
         <button type="button" value="addBook" id="add-new-book">Add new book</button>
     </div>  
     <div id="form-container">
-        <form action="/submit book">        
-            <input type="text" placeholder="Title" id="book-title">
-            <input type="text" placeholder="Author" id="book-author">
-            <input type="text" placeholder="Pages" id="book-pages">
-            Read: <input type="radio" name="read-status" id="read-yes" value="yes">Yes <input type="radio" name="read-status" id="read-no" value="no">No<br>
+        <!-- <form action="/submit book">         -->
+         <form action="#" name="book-form">
+             <p>
+                <input type="text" placeholder="Title*" id="book-title" required>
+                <span class="error" aria-live="polite"></span>
+            </p>
+            <p>
+                <input type="text" placeholder="Author*" id="book-author" required>
+                <span class="error" aria-live="polite"></span>
+            </p>
+            <p>
+                <input type="text" placeholder="Pages*" id="book-pages" required pattern="\d*">
+            <span class="error" aria-live="polite"></span>
+            </p>       
+            <p>
+                <legend>Read:</legend>
+            <input type="radio" required name="read-status" id="read-yes" value="yes"><label for="read-yes">Yes</label>
+            <input type="radio" required name="read-status" id="read-no" value="no"><label for="read-no">No</label><br> 
+            <span class="error" id="radio-span" aria-live="polite"></span>
+            </p>
+            <p>
+                <button type="submit" value="submit" id="form-submit">Submit</button>
+            </p>
             
-            <button type="button" value="submit" id="form-submit">Submit</button>
         </form>
     </div>
 
